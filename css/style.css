@@ -1,0 +1,411 @@
+
+:root {
+  scroll-padding-top: 30px;
+  scroll-behavior: smooth;
+  --mainGraycolor: #f5f4f5;
+  --textGray: rgb(116, 129, 130);
+  --montFont: "Montserrat", sans-serif;
+  --popFont: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--montFont);
+}
+p {
+  font-family: var(--popFont);
+}
+
+
+.sectionTitle {
+  width: fit-content;
+}
+.sectionTitle:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: url(../imgs/dots.png);
+}
+
+.iconContainer {
+  width: 60px;
+  height: 60px;
+}
+.innerCard .iconContainer {
+  transition: color 500ms, background-color 500ms;
+}
+.innerCard:hover .iconContainer {
+  background-color: black;
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.icon:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+
+.nav-link {
+  position: relative;
+  width: fit-content;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: black;
+  transition: width 500ms;
+}
+.nav-link.active::after {
+  width: 100%;
+}
+
+.ff-mont {
+  font-family: var(--montFont);
+}
+.ff-pop {
+  font-family: var(--popFont);
+}
+.fw-bolded {
+  font-weight: 900;
+}
+.fs-7 {
+  font-size: 14px;
+}
+.fs-8 {
+  font-size: 12px;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+.grayColorBg {
+  background-color: var(--mainGraycolor);
+}
+.textGray {
+  color: rgb(116, 129, 130);
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+  transition: all 500ms;
+}
+.btn-white {
+  transition: all 500ms;
+}
+.btn-white:hover {
+  background-color: black;
+  color: white;
+}
+
+.form-control:focus {
+  background-color: var(--mainGraycolor) !important;
+  box-shadow: 0 0 0 0;
+}
+
+
+.navbar:has(a[href="#home"].active) {
+  background-color: unset !important;
+  /* position: static !important; */
+}
+.navbar:has(a[href="#home"].active) a {
+  color: white !important;
+}
+
+.navbar:has(a[href="#home"].active) .nav-link::after {
+  background-color: white;
+}
+
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../imgs/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+header .homeContent h1,
+header .homeContent h6 {
+  font-size: 60px;
+}
+.homeContent h6::after {
+  content: "Larry Daniels|";
+  animation: typing 6s infinite;
+  font-weight: 400;
+  
+}
+.homeContent .socialIcons .icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+/* !About */
+.about .picture img {
+  translate: 30px;
+}
+.about .picture:before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 25%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: url(../imgs/dots.png);
+}
+.about .progress {
+  height: 23px;
+}
+.about .progress:first-of-type .progress-bar {
+  width: 95%;
+}
+.about .progress:nth-of-type(2) .progress-bar {
+  width: 80%;
+}
+.about .progress:last-of-type .progress-bar {
+  width: 90%;
+}
+
+
+.portfolio .innerCard .cardLayer {
+  top: 10%;
+  transition: opacity 400ms, top 400ms;
+}
+.portfolio .innerCard:hover .cardLayer {
+  top: 0;
+  opacity: 1 !important;
+}
+.portfolio .innerCard .cardLayer p {
+  letter-spacing: 2px;
+}
+.portfolio .innerCard .cardLayer .layerContent {
+  transition: gap 800ms;
+}
+.portfolio .innerCard:hover .cardLayer .layerContent {
+  gap: 0 !important;
+}
+
+
+.clients .carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+}
+.clients .carousel-inner .carouselImage {
+  width: 100px;
+  height: 100px;
+}
+
+.team .cardImage img {
+  transition: scale 500ms;
+}
+.team .cardImage:hover img {
+  scale: 1.1;
+}
+.team .cardLayer {
+  scale: 0.6;
+  rotate: y 180deg;
+  transition: scale 600ms, opacity 600ms, rotate 600ms;
+}
+.team .cardInner:hover .cardLayer {
+  opacity: 1 !important;
+  scale: 1;
+  rotate: y 360deg;
+}
+
+
+@keyframes typing {
+  0% {
+    content: "Larry Daniel|";
+  }
+
+  2.27% {
+    content: "Larry Danie|";
+  }
+
+  4.54% {
+    content: "Larry Dani|";
+  }
+
+  6.81% {
+    content: "Larry Dan|";
+  }
+
+  9.08% {
+    content: "Larry Da|";
+  }
+
+  11.35% {
+    content: "Larry D|";
+  }
+
+  13.62% {
+    content: "Larry |";
+  }
+
+  15.89% {
+    content: "Larry|";
+  }
+
+  18.16% {
+    content: "Larr|";
+  }
+
+  20.43% {
+    content: "Lar|";
+  }
+
+  22.70% {
+    content: "La|";
+  }
+
+  24.97% {
+    content: "L|";
+  }
+
+  27.24% {
+    content: "|";
+  }
+
+  29.51% {
+    content: "D|";
+  }
+
+  31.78% {
+    content: "De|";
+  }
+
+  34.05% {
+    content: "Des|";
+  }
+
+  36.32% {
+    content: "Desi|";
+  }
+
+  38.59% {
+    content: "Desig|";
+  }
+
+  40.86% {
+    content: "Design|";
+  }
+
+  43.13% {
+    content: "Designe|";
+  }
+
+  45.40% {
+    content: "Designer|";
+  }
+
+  47.67% {
+    content: "Designe|";
+  }
+
+  49.94% {
+    content: "Design|";
+  }
+
+  52.21% {
+    content: "Desig|";
+  }
+
+  54.48% {
+    content: "Desi|";
+  }
+
+  56.75% {
+    content: "Des|";
+  }
+
+  59.02% {
+    content: "De|";
+  }
+
+  61.29% {
+    content: "D|";
+  }
+
+  63.56% {
+    content: "D|";
+  }
+
+  65.83% {
+    content: "De|";
+  }
+
+  68.10% {
+    content: "Dev|";
+  }
+
+  70.37% {
+    content: "Deve|";
+  }
+
+  72.64% {
+    content: "Devel|";
+  }
+
+  74.91% {
+    content: "Develo|";
+  }
+
+  77.18% {
+    content: "Develop|";
+  }
+
+  79.45% {
+    content: "Develope|";
+  }
+
+  81.72% {
+    content: "Developer|";
+  }
+
+  83.99% {
+    content: "Develope|";
+  }
+
+  86.26% {
+    content: "Develop|";
+  }
+
+  88.53% {
+    content: "Develo|";
+  }
+
+  90.80% {
+    content: "Devel|";
+  }
+
+  93.07% {
+    content: "Deve|";
+  }
+
+  95.34% {
+    content: "Dev|";
+  }
+
+  97.61% {
+    content: "D|";
+  }
+
+  100% {
+    content: "|";
+  }
+}
